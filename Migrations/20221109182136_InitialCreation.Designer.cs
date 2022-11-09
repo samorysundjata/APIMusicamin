@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIMusicamin.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221109172232_InitialCreation")]
+    [Migration("20221109182136_InitialCreation")]
     partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,8 +25,9 @@ namespace APIMusicamin.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Done")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Artista")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

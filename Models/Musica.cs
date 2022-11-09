@@ -1,4 +1,2 @@
-﻿using APIMusicamin.Models;
-
-public record Musica(Guid Id, string Titulo, bool Done);
+﻿public record Musica(Guid Id, string Titulo, string Artista);
 
