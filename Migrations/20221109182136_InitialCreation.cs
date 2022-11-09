@@ -15,7 +15,7 @@ namespace APIMusicamin.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Titulo = table.Column<string>(type: "TEXT", nullable: false),
-                    Done = table.Column<bool>(type: "INTEGER", nullable: false)
+                    Artista = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

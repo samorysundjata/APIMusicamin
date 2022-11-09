@@ -23,8 +23,9 @@ namespace APIMusicamin.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Done")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Artista")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
