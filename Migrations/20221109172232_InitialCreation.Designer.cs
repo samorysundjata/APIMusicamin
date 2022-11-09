@@ -11,13 +11,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIMusicamin.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221025201620_InitialCreations")]
-    partial class InitialCreations
+    [Migration("20221109172232_InitialCreation")]
+    partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
 
             modelBuilder.Entity("Musica", b =>
                 {

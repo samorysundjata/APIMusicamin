@@ -3,7 +3,7 @@ using Flunt.Validations;
 
 namespace APIMusicamin.ViewModels
 {
-    public class CriarMusicaViewModel : Notifiable<Notification>
+    public class CreateMusicaViewModel : Notifiable<Notification>
     {
         public string Titulo { get; set; }
 
@@ -18,6 +18,5 @@ namespace APIMusicamin.ViewModels
 
             return new Musica(Guid.NewGuid(), Titulo, false);
         }
-
     }
 }
