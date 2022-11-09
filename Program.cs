@@ -1,6 +1,18 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using APIMusicamin.Data;
 
-app.MapGet("/", () => "Minimal API .NET 6 para catálogo de música!");
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.MapGet("v1/musicas", (AppDbContext context) =>
+{
+    var musics = context.Musicas.ToList();
+    return Results.Ok(musics);
+});
 
 app.Run();
